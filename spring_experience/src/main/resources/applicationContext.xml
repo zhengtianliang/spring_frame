@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="user" class="com.zheng.domain.User">
+        <property name="username" value="jack"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <!-- 若有很多的实体，需要创建很多个bean标签，很繁琐，所以就有了
+    component-scan ，直接扫描某个包，包下的全部实体都会被扫描，而不会创建bean -->
+    <context:component-scan base-package="com.zheng.domain"/>
+</beans>
