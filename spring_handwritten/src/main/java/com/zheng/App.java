@@ -19,9 +19,14 @@ public class App {
         HAnnotationConfigApplicationContext context = new HAnnotationConfigApplicationContext(ScanConfiguration.class);
 
         List<Class<?>> beanDefinitionNames = context.getBeanDefinitionNames();
-        System.out.println(beanDefinitionNames);
+//        System.out.println(beanDefinitionNames);
 
         Object bean = context.getBean(UserController.class);
-        System.out.println(bean);
+//        System.out.println(bean);
+
+        // 测试手写的di功能有没有实现
+        UserController bean1 = (UserController) context.getBean(UserController.class);
+        bean1.userController();
+
     }
 }

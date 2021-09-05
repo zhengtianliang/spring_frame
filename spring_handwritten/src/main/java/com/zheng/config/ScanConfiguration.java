@@ -10,6 +10,7 @@ import com.zheng.annotation.HConfiguration;
  */
 
 @HConfiguration
-@HComponentScan(basePackage = "com.zheng.controller")
+@HComponentScan(basePackage = "com.zheng")
+//@HComponentScan(basePackage = "com.zheng.controller")
 public class ScanConfiguration {
 }

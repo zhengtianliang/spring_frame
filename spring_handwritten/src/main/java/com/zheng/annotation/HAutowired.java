@@ -12,7 +12,8 @@ import java.lang.annotation.Target;
  *  所谓的 di 功能就是说，通过@Autowired/@Resource 来控制bean对象(比如说Controller中引入service)
  */
 
-@Target({ElementType.TYPE})     // 表示这个注解是修饰在类上的
+//@Target({ElementType.TYPE})     // 表示这个注解是修饰在类上的
+@Target(ElementType.FIELD)          // 表示是字段上
 @Retention(RetentionPolicy.RUNTIME) // 声明周期是运行时
 public @interface HAutowired {
 }

@@ -2,6 +2,7 @@ package com.zheng.controller;
 
 import com.zheng.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
@@ -17,5 +18,6 @@ import org.springframework.stereotype.Service;
 public class OrderController {
 
     @Autowired
+//    @Qualifier(value = "具体要哪个实现，比如说有 UserServiceImpl1、UserServiceImpl2")
     private UserService userService;
 }
